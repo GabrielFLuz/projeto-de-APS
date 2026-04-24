@@ -3,6 +3,10 @@
     display: flex;
 }
 
+.dropdown-menu{
+    width: 10px;
+
+}
 div#main {
     
 }
@@ -13,4 +17,8 @@ div#professor {
 
 div#aluno {
     
+}
+
+body {
+    background-color: lightgray;
 }
