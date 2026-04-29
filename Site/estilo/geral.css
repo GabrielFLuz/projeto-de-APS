@@ -1,24 +1,30 @@
+body {
+    background-color: whitesmoke;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
 .navbar {
     height: 50px;
     display: flex;
 }
 
-.dropdown-menu{
-    width: 10px;
-
-}
-div#main {
-    
+.dropdown-menu {
+    background-color: rgb(54, 52, 52);
+    text-decoration: dashed;
 }
 
-div#professor {
-    
+.dropdown-menu ul:active{
+    color: white;
 }
 
-div#aluno {
-    
+.dropdown-item {
+    color: white;
 }
 
-body {
-    background-color: lightgray;
+.logo-nav {
+    height: 35px;
+    width: 200%;
+    display: flex;
 }
