@@ -3,7 +3,7 @@
     background-size: 100% 100%;
     background-position: center;
     color: white;
-    height: 35vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -16,6 +16,7 @@
         -2px  2px 0 black,
          2px  2px 0 black,
          0px  0px 5px black;
+
 }
 
 .fundo_imagem_um h1 {
@@ -76,16 +77,4 @@
 
 .saiba_mais a:hover {
     color: #ccc;               /* cor ao passar o mouse */
-}
-
-/* Ajuste para telas pequenas */
-@media (max-width: 600px) {
-    .professor {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .article_prof {
-        text-align: center;
-    }
 }
