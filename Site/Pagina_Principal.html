@@ -10,7 +10,7 @@
 </head>
 <body id="main">
     <header>
-        <nav class="navbar navbar-expand bg-dark navbar-dark">
+        <nav class="navbar navbar-expand bg-dark navbar-dark" aria-label="Navegação principal">
             <div class="container-fluid">
                 <ul class="nav">
                     <li class="nav-item dropdown">
@@ -20,48 +20,52 @@
                             <li><a class="dropdown-item" href="professor/biografia.html">Professor</a></li>
                             <li><a class="dropdown-item" href="planos/mensalidade.html">Planos</a></li>
                             <li><a class="dropdown-item" href="usuario/conta.html">Conta</a></li>
+                            <li><a class="dropdown-item" href="cadastro/formulario.html">Cadastro</a></li>
                         </ul>
                     </li>
                 </ul>
                 <a href="Pagina_Principal.html" class="mx-auto">
                     <img src="imagens/logo_sem_fundo.png" alt="Clique aqui para ir à página inicial" class="logo-nav">
                 </a>
+                <a href="cadastro/formulario.html" class="cadastro">Cadastre-se</a>
             </div>
         </nav>
     </header>
 
     <!-- Seção inicial -->
-    <div class="container-fluid fundo_imagem_um">
-        <h1>Bem-vindo à Inside Muay Thay</h1>
-        <h3>FORMANDO CAMPEÕES PARA A VIDA</h3>
-        <p>Conheça mais sobre a Inside Muai Thai <br> e como começou sua história no Brasil</p>
-        <button class="btn btn-outline-dark saiba_mais" type="button">
-            <a href="academia/sobre.html">saiba mais</a>
-        </button>
-    </div>
-
-    <!-- Seção professor -->
-    <div class="professor container-fluid justify-content-center" >
-        <img src="imagens/professor_foto.jpeg" alt="Foto do professor Fernando Pirata">
-        <aside class="aside_prof">
-            <h2 class="p-2 w-100 bd-highlight">Professor Fernando Pirata</h2>
-            <p class="p-2 w-100 bd-highlight">Conheça mais sobre sua trajetória<br> e como chegou até aqui</p>
+    <main>
+        <div class="container-fluid fundo_imagem_um">
+            <h1>Bem-vindo à <em><cite>Inside Muay Thay</cite></em></h1>
+            <h3>FORMANDO CAMPEÕES PARA A VIDA</h3>
+            <p>Conheça mais sobre a Inside Muai Thay <br> e como começou sua história no Brasil</p>
             <button class="btn btn-outline-dark saiba_mais" type="button">
-               <a href="professor/biografia.html">saiba mais</a>
+                <a href="academia/sobre.html">saiba mais</a>
             </button>
-        </aside>
-        <img src="imagens/professor_foto_dois.png" alt="Outra foto do proferssor fernando pirata">
-    </div>
+        </div>
 
-    <!-- Seção mensalidade -->
-    <div class="mensalidade container-fluid">
-        <h2 class="p-2 w-100 bd-highlight">Planos personalizados</h2>
-        <p class="p-2 w-100 bd-highlight">Conheça oque cada um pode oferecer
-        </p>
-        <button class="btn btn-outline-dark saiba_mais" type="button">
-            <a href="planos/mensalidade.html">saiba mais</a>
-        </button>
-    </div>
+        <!-- Seção professor -->
+        <div class="professor container-fluid justify-content-center" >
+            <img src="imagens/professor_foto.jpeg" alt="Foto do professor Fernando Pirata">
+            <aside class="aside_prof">
+                <h2 class="p-2 w-100 bd-highlight">Professor Fernando Pirata</h2>
+                <p class="p-2 w-100 bd-highlight">Conheça mais sobre sua trajetória<br> e como chegou até aqui</p>
+                <button class="btn btn-outline-dark saiba_mais" type="button">
+                <a href="professor/biografia.html">saiba mais</a>
+                </button>
+            </aside>
+            <img src="imagens/professor_foto_dois.png" alt="Outra foto do proferssor fernando pirata">
+        </div>
+
+        <!-- Seção mensalidade -->
+        <div class="mensalidade container-fluid">
+            <h2 class="p-2 w-100 bd-highlight">Planos personalizados</h2>
+            <p class="p-2 w-100 bd-highlight">Conheça oque cada um pode oferecer
+            </p>
+            <button class="btn btn-outline-dark saiba_mais" type="button">
+                <a href="planos/mensalidade.html">saiba mais</a>
+            </button>
+        </div>
+    </main>
 
     <footer>
         
