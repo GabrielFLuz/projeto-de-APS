@@ -84,3 +84,15 @@
 .saiba_mais a:hover {
     color: #ccc;               /* cor ao passar o mouse */
 }
+
+/* Ajuste para telas pequenas */
+@media (max-width: 600px) {
+    .professor {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .article_prof {
+        text-align: center;
+    }
+}
