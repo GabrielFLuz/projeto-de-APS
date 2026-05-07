@@ -1,3 +1,13 @@
+main {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 32px;
+}
+
 .fundo_imagem_um {
     background-image: url(../imagens/logo_imagem_fundo.png);
     background-size: 100% 100%;
@@ -16,6 +26,7 @@
         -2px  2px 0 black,
          2px  2px 0 black,
          0px  0px 5px black;
+    
 
 }
 

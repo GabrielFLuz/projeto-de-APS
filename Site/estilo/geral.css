@@ -29,14 +29,15 @@ body {
     display: flex;
 }
 
-/* Ajuste para telas pequenas */
-@media (max-width: 600px) {
-    .professor {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .article_prof {
-        text-align: center;
-    }
+.cadastro{
+    height: 10%;
+    width: 5%; 
+    right: auto;
+    color-interpolation-filters: unset;
+    color: white;
+    text-decoration: none;
+    border: solid;
+    border-width: thin;
+    margin-right: 1rem;
+    text-align: center;
 }
