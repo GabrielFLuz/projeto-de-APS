@@ -1,0 +1,169 @@
+main {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 32px;
+}
+
+.fundo_imagem_um {
+    background-image: url(../imagens/logo_imagem_fundo.png);
+    background-size: 100% 100%;
+    background-position: center;
+    color: white;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    -webkit-text-stroke: 0.3px black;
+    text-shadow: -2px -2px 0 black,
+         2px -2px 0 black,
+        -2px  2px 0 black,
+         2px  2px 0 black,
+         0px  0px 5px black;
+    
+
+}
+
+.fundo_imagem_um h1 {
+    font-size: clamp(20px, 4vw, 48px);
+}
+.fundo_imagem_um h3 {
+    font-size: clamp(16px, 3vw, 36px);
+    font-weight: 500;
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.fundo_imagem_um p {
+    font-size: clamp(14px, 2vw, 24px);
+}
+
+.professor {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 2vw;
+    padding: 20px;
+}
+
+.professor img {
+    width: clamp(150px, 25%, 300px);
+    height: auto;
+}
+
+.aside_prof {
+    margin: auto;
+    border: auto;
+    padding: auto;
+}
+.aside_prof h2 {
+    font-size: clamp(18px, 3vw, 36px);
+}
+
+.aside_prof p {
+    font-size: clamp(14px, 2vw, 24px);
+}
+
+.mensalidade {
+    text-align: center;
+    padding-right: 20px;
+}
+.mensalidade p {
+    font-size: clamp(14px, 2vw, 24px);
+    font-weight: bold;
+}
+
+.saiba_mais {
+    background-color: black;
+    color: white;
+    border-color: white;
+    margin-bottom: 20px;
+}
+
+.saiba_mais a {
+    color: white;              
+    text-decoration: none;     /* remove o sublinhado */
+}
+
+.saiba_mais a:hover {
+    color: #ccc;               /* cor ao passar o mouse */
+}
+
+/* Para telas pequenas (celulares) */
+@media (max-width: 600px) {
+    main {
+        max-width: 100%;       /* ocupa toda a largura */
+        padding: 16px;         /* menos espaço interno */
+        border-radius: 10px;   /* cantos menos arredondados */
+    }
+
+    .fundo_imagem_um {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .professor {
+        flex-direction: column; /* empilha imagem e texto */
+        gap: 10px;
+    }
+
+    .professor img {
+        width: 80%;            /* imagem ocupa mais espaço */
+    }
+
+    .aside_prof h2 {
+        font-size: 20px;
+    }
+
+    .aside_prof p {
+        font-size: 16px;
+    }
+
+    .mensalidade p {
+        font-size: 16px;
+    }
+
+    .saiba_mais {
+        width: 30%;           /* botão ocupa toda a largura */
+        padding: 12px;
+    }
+}
+
+/* Para telas médias (tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    main {
+        max-width: 90%;
+        padding: 24px;
+    }
+
+    .professor img {
+        width: clamp(120px, 40%, 250px);
+    }
+
+    .aside_prof h2 {
+        font-size: clamp(18px, 2.5vw, 28px);
+    }
+
+    .aside_prof p {
+        font-size: clamp(14px, 2vw, 20px);
+    }
+}
+
+/* Para telas grandes (desktop) */
+@media (min-width: 1025px) {
+    main {
+        max-width: 1100px; /* mantém limite */
+        padding: 32px;
+    }
+
+    .professor img {
+        width: clamp(150px, 25%, 300px);
+    }
+}
