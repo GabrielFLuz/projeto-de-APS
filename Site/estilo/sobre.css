@@ -7,3 +7,79 @@ main {
     margin: 0 auto;
     padding: 32px;
 }
+
+/* Estilos gerais */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Títulos */
+h1, h2 {
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Parágrafos */
+p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+/* Imagens responsivas */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Links */
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Espaçamento entre seções */
+section, article {
+  margin-bottom: 40px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  h2 {
+    font-size: 1.4rem;
+  }
+  p {
+    font-size: 0.95rem;
+  }
+  .row {
+    flex-direction: column;
+    text-align: center;
+  }
+  .col-md-4, .col-md-8 {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+  p {
+    font-size: 0.9rem;
+  }
+  img {
+    margin-bottom: 15px;
+  }
+}
