@@ -1,80 +1,9 @@
-.img {
-    border-radius: 5%;
-    width: 270px;
-    height: 180px;
-    margin: 10px 20px 10px 0; /* Margem na direita para o texto não colar */
-    object-fit: fill;
-    float: left; /* FAZ O TEXTO SUBIR */
-}
-
-.imgdireita{
-    float: right;
-    border-radius: 5%;
-    object-fit: fill;
-    width: 270px;
-    height: 180px;
-    margin: 10px 20px 10px 0; /* Margem na direita para o texto não colar */
-    right: 0;
-}
-
-.links {
-    font-size: 1.5em;
-    font-weight: bold;
-    text-decoration: none;
-    color: #D4AF37;
-    display: block;      /* Força a quebra de linha */
-    clear: both;         /* Limpa qualquer interferência de float (texto ou imagem) */
-    width: fit-content;  /* Garante que o clique seja apenas no texto */
-    margin-top: 20px;    /* Cria uma distância do texto de cima */
-    margin-bottom: 30px; /* Distância para o que vier abaixo */
-    margin-left: auto;
-}
-
-.link2 {
-    font-size: 1.5em;
-    font-weight: bold;
-    text-decoration: none;
-    color: #D4AF37;
-    display: block;      /* Força a quebra de linha */
-    clear: both;         /* Limpa qualquer interferência de float (texto ou imagem) */
-    width: fit-content;  /* Garante que o clique seja apenas no texto */
-    margin-top: 20px;    /* Cria uma distância do texto de cima */
-    margin-bottom: 30px; /* Distância para o que vier abaixo */
-    margin-left: left;
-}
-
-.containers::after {
-    content: "";
-    display: table;
-    clear: both;
-    position: relative;
-}
-
-h5 {
-    margin: 15px;
-}
-
-.texto1 {
-    display: inline; 
-}
-
-.texto1::first-letter {
-    font-size: 3.5em;       /* Deixa a letra grandona */
-    font-weight: bold;
-    float: left;            /* Faz o texto contornar a letra */
-    line-height: 0.8;
-    margin: 5px 8px 0 0;
-    color: #D4AF37;         /* Cor dourada para combinar com o logo */
-    font-family: serif;     /* Estilo clássico */
-}
-
-/* Garante que o H5 não empurre para baixo */
-h5.texto1 {
-    display: block; 
-    margin-top: 10px; /* Ajuste para alinhar com o topo da imagem */
-}
-
-.texto2 {
-   display: inline; 
-   position: relative;
+main {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 32px;
 }

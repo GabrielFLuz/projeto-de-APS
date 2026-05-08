@@ -6,8 +6,8 @@ body {
 }
 
 .navbar {
-    height: 50px;
-    display: flex;
+    height: clamp(10%, 15%, 20%);
+    display: flex;    
 }
 
 .dropdown-menu {
@@ -24,20 +24,25 @@ body {
 }
 
 .logo-nav {
-    height: 35px;
+    height: clamp(10px, 35px, 50px);
     width: 200%;
     display: flex;
+    justify-self: center;
 }
 
 .cadastro{
-    height: 10%;
-    width: 5%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: clamp(100px, 10%, 200px);
+    height: clamp(40px, 5%, 80px);
     right: auto;
     color-interpolation-filters: unset;
     color: white;
     text-decoration: none;
-    border: solid;
-    border-width: thin;
+    border: solid thin;
     margin-right: 1rem;
     text-align: center;
 }
+
+/* Para telas pequenas (celulares) */
