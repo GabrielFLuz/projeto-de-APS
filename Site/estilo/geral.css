@@ -28,6 +28,7 @@ body {
     width: 200%;
     display: flex;
     justify-self: center;
+    align-items: center;
 }
 
 .cadastro{
