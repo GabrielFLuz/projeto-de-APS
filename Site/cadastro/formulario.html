@@ -36,29 +36,30 @@
 
   <main class="container py-4">
     <form id="cadastroForm">
+      <!-- Campos já existentes -->
       <div class="mb-3">
         <label for="nome" class="form-label">Nome completo</label>
-        <input type="text" class="form-control" id="nome" placeholder="Digite seu nome completo">
+        <input type="text" class="form-control" id="nome" required>
       </div>
 
       <div class="mb-3">
         <label for="nascimento" class="form-label">Data de Nascimento</label>
-        <input type="date" class="form-control" id="nascimento">
+        <input type="date" class="form-control" id="nascimento" required>
       </div>
 
       <div class="mb-3">
         <label for="telefone" class="form-label">Telefone / Celular</label>
-        <input type="tel" class="form-control" id="telefone" placeholder="(00) 00000-0000">
+        <input type="tel" class="form-control" id="telefone" required>
       </div>
 
       <div class="mb-3">
         <label for="email" class="form-label">Seu E-mail</label>
-        <input type="email" class="form-control" id="email" placeholder="email@exemplo.com">
+        <input type="email" class="form-control" id="email" required>
       </div>
 
       <div class="mb-3">
         <label for="nivel" class="form-label">Nível de Experiência</label>
-        <select class="form-select" id="nivel">
+        <select class="form-select" id="nivel" required>
           <option selected disabled>Selecione seu nível</option>
           <option value="iniciante">Iniciante</option>
           <option value="intermediario">Intermediário</option>
@@ -66,14 +67,56 @@
         </select>
       </div>
 
+      <!-- Campo Experimental -->
+      <div class="mb-3">
+        <label class="form-label" for="experimentalsim">Experimental</label><br>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="experimental" id="experimentalsim" value="option1" required>
+          <label class="form-check-label" for="experimentalsim">Sim</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="experimental" id="experimentalnao" value="option2">
+          <label class="form-check-label" for="experimentalnao">Não</label>
+        </div>
+      </div>
+
+      <!-- Campo Dias disponíveis -->
+      <fieldset class="mb-3">
+        <legend class="form-label">Dias disponíveis para treino:</legend>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" name="dias" id="seg" value="Segunda">
+          <label class="form-check-label" for="seg">Seg</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" name="dias" id="ter" value="Terça">
+          <label class="form-check-label" for="ter">Ter</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" name="dias" id="qua" value="Quarta">
+          <label class="form-check-label" for="qua">Qua</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" name="dias" id="qui" value="Quinta">
+          <label class="form-check-label" for="qui">Qui</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" name="dias" id="sex" value="Sexta">
+          <label class="form-check-label" for="sex">Sex</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" name="dias" id="todos" value="Todos">
+          <label class="form-check-label" for="todos">Todos</label>
+        </div>
+      </fieldset>
+
       <div class="mb-3">
         <label for="lesao" class="form-label">Possui alguma lesão ou condição médica?</label>
-        <textarea class="form-control" id="lesao" rows="2" placeholder="Descreva aqui ou digite 'Nenhuma'"></textarea>
+        <textarea class="form-control" id="lesao" rows="2"></textarea>
       </div>
 
       <div class="mb-3">
         <label for="senha" class="form-label">Senha</label>
-        <input type="password" class="form-control" id="senha">
+        <input type="password" class="form-control" id="senha" required>
       </div>
 
       <button type="submit" class="btn btn-primary w-100">Confirmar cadastro</button>
@@ -88,25 +131,28 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
   <script>
-    document.getElementById("cadastroForm").addEventListener("submit", function(event) {
-      event.preventDefault();
+  document.getElementById("cadastroForm").addEventListener("submit", function(event) {
+    event.preventDefault();
 
-      const dados = {
-        nome: document.getElementById("nome").value,
-        nascimento: document.getElementById("nascimento").value,
-        telefone: document.getElementById("telefone").value,
-        email: document.getElementById("email").value,
-        nivel: document.getElementById("nivel").value,
-        lesao: document.getElementById("lesao").value,
-        senha: document.getElementById("senha").value
-      };
+    const diasSelecionados = Array.from(document.querySelectorAll('input[name="dias"]:checked'))
+                                  .map(el => el.value);
 
-      // salva no navegador
-      localStorage.setItem("dadosCadastro", JSON.stringify(dados));
+    const dados = {
+      nome: document.getElementById("nome").value,
+      nascimento: document.getElementById("nascimento").value,
+      telefone: document.getElementById("telefone").value,
+      email: document.getElementById("email").value,
+      nivel: document.getElementById("nivel").value,
+      lesao: document.getElementById("lesao").value,
+      senha: document.getElementById("senha").value,
+      experimental: document.querySelector('input[name="experimental"]:checked').value,
+      dias: diasSelecionados
+    };
 
-      // redireciona para a página da conta
-      window.location.href = "../usuario/conta.html";
-    });
+    localStorage.setItem("dadosCadastro", JSON.stringify(dados));
+    alert("Cadastro realizado com sucesso!");
+    window.location.href = "../usuario/conta.html";
+  });
   </script>
 </body>
 </html>
