@@ -48,7 +48,7 @@
         <nav class="navbar navbar-expand-lg sticky-top">
             <div class="container">
                 <a href="../index.html" class="navbar-brand">
-                    <img src="../imagens/logofogo.jpg"alt="Logo Inside Muay Thai" height="50">
+                    <img src="../imagens/logofogo.jpeg"alt="Logo Inside Muay Thai" height="50">
                 </a>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav align-items-center gap-3">
@@ -147,5 +147,46 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    
+    <script>
+        document.getElementById("planoForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Impede que a página recarregue ao clicar no botão
+
+        // 1. Captura o valor selecionado no <select> do plano
+        const plano = document.getElementById("plano").value;
+        let valorBase = 0;
+
+        // 2. Define o preço base de acordo com a escolha
+        switch(plano) {
+            case "mensal": valorBase = 279; break;
+            case "semestral": valorBase = 239; break;
+            case "anual": valorBase = 219; break;
+        }
+
+        // 3. Verifica se os extras (checkboxes) estão marcados
+        let extras = 0;
+        const aulasEspeciais = document.getElementById("extraAulas");
+        
+        // Se o checkbox de aulas especiais existir e estiver marcado, soma R$ 100
+        if (aulasEspeciais && aulasEspeciais.checked) {
+            extras += 100;
+        }
+
+        // 4. Calcula o total
+        const valorFinal = valorBase + extras;
+
+        // 5. Exibe o resultado na div de alerta
+        const resultadoDiv = document.getElementById("resultado");
+        resultadoDiv.style.display = "block"; // Faz a div aparecer
+        resultadoDiv.innerHTML = `
+            <h4 class="text-gold">Resultado da Simulação</h4>
+            <p class="mb-1">Plano Escolhido: <strong>${plano.toUpperCase()}</strong></p>
+            <p class="mb-1">Valor Base: R$ ${valorBase.toFixed(2)}</p>
+            <p class="mb-1">Adicionais: R$ ${extras.toFixed(2)}</p>
+            <hr class="border-secondary">
+            <h3 class="text-danger">Total: R$ ${valorFinal.toFixed(2)} /mês</h3>
+        `;
+    });
+    </script>
 </body>
 </html>
