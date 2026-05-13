@@ -26,7 +26,7 @@
           </li>
         </ul>
         <a href="../index.html" class="mx-auto">
-          <img src="../imagens/logo_sem_fundo.png" alt="Logo" class="logo-nav">
+          <img src="C:\Users\Hewlett Packard\Downloads\logofogo.jpg.jpeg" alt="Logo" class="logo-nav">
         </a>
         <a href="../cadastro/formulario.html" class="cadastro">Cadastre-se</a>
       </div>
@@ -68,49 +68,6 @@
         <label for="editLesao" class="form-label">Lesão</label>
         <textarea class="form-control" id="editLesao" rows="2"></textarea>
       </div>
-
-      <!-- Campo Experimental -->
-      <div class="mb-2">
-        <label class="form-label" for="editExperimentalSim">Experimental</label><br>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="editExperimental" id="editExperimentalSim" value="option1">
-          <label class="form-check-label" for="editExperimentalSim">Sim</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="editExperimental" id="editExperimentalNao" value="option2">
-          <label class="form-check-label" for="editExperimentalNao">Não</label>
-        </div>
-      </div>
-
-      <!-- Campo Dias disponíveis -->
-      <fieldset class="mb-3">
-        <legend class="form-label">Dias disponíveis para treino:</legend>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="checkbox" name="editDias" id="editSeg" value="Segunda">
-          <label class="form-check-label" for="editSeg">Seg</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="checkbox" name="editDias" id="editTer" value="Terça">
-          <label class="form-check-label" for="editTer">Ter</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="checkbox" name="editDias" id="editQua" value="Quarta">
-          <label class="form-check-label" for="editQua">Qua</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="checkbox" name="editDias" id="editQui" value="Quinta">
-          <label class="form-check-label" for="editQui">Qui</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="checkbox" name="editDias" id="editSex" value="Sexta">
-          <label class="form-check-label" for="editSex">Sex</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="checkbox" name="editDias" id="editTodos" value="Todos">
-          <label class="form-check-label" for="editTodos">Todos</label>
-        </div>
-      </fieldset>
-
       <button type="submit" class="btn btn-success w-100">Salvar alterações</button>
     </form>
   </main>
@@ -138,8 +95,6 @@
             <p><strong>Email:</strong> ${dados.email}</p>
             <p><strong>Nível:</strong> ${dados.nivel}</p>
             <p><strong>Lesão:</strong> ${dados.lesao}</p>
-            <p><strong>Experimental:</strong> ${dados.experimental === "option1" ? "Sim" : "Não"}</p>
-            <p><strong>Dias disponíveis:</strong> ${dados.dias && dados.dias.length > 0 ? dados.dias.join(", ") : "Não informado"}</p>
           `;
         } else {
           div.innerHTML = "<p>Nenhum cadastro encontrado.</p>";
@@ -149,7 +104,7 @@
 
       mostrarDados();
 
-      // Preenche formulário de edição
+      // Mostrar formulário de edição com dados preenchidos
       editarBtn.addEventListener("click", function() {
         editarForm.style.display = "block";
         document.getElementById("editNome").value = dados.nome;
@@ -158,46 +113,24 @@
         document.getElementById("editEmail").value = dados.email;
         document.getElementById("editNivel").value = dados.nivel;
         document.getElementById("editLesao").value = dados.lesao;
-
-        // Preenche campo experimental
-        if (dados.experimental === "option1") {
-          document.getElementById("editExperimentalSim").checked = true;
-        } else {
-          document.getElementById("editExperimentalNao").checked = true;
-        }
-
-        // Preenche checkboxes de dias
-        if (dados.dias) {
-          dados.dias.forEach(dia => {
-            const checkbox = document.querySelector(`input[name="editDias"][value="${dia}"]`);
-            if (checkbox) checkbox.checked = true;
-          });
-        }
       });
 
       // Salvar alterações
       editarForm.addEventListener("submit", function(event) {
         event.preventDefault();
-
-        const novosDias = Array.from(document.querySelectorAll('input[name="editDias"]:checked'))
-          .map(el => el.value);
-
         const novosDados = {
           nome: document.getElementById("editNome").value,
           nascimento: document.getElementById("editNascimento").value,
           telefone: document.getElementById("editTelefone").value,
           email: document.getElementById("editEmail").value,
           nivel: document.getElementById("editNivel").value,
-          lesao: document.getElementById("editLesao").value,
-          experimental: document.querySelector('input[name="editExperimental"]:checked').value,
-          dias: novosDias
+          lesao: document.getElementById("editLesao").value
         };
-
         localStorage.setItem("dadosCadastro", JSON.stringify(novosDados));
         alert("Dados atualizados com sucesso!");
-        location.reload();
+        location.reload(); // recarrega a página para mostrar os novos dados
       });
     });
   </script>
-  </body>
+</body>
 </html>
