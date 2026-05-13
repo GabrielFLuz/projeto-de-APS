@@ -3,163 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous">
-    <link rel="stylesheet" href="../estilo/geral.css">
-    <link rel="stylesheet" href="../estilo/biografia.css">
-    <title>Biografia | Fernando Pirata</title>
+    <title>Mestre Fernando Pirata | Biografia</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../estilo/style.css">
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand bg-dark navbar-dark" aria-label="Navegação principal">
-            <div class="container-fluid">
-                <ul class="nav">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Menu</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="../index.html">Início</a></li>
-                            <li><a class="dropdown-item" href="../academia/sobre.html">Inside</a></li>
-                            <li><a class="dropdown-item" href="../planos/mensalidade.html">Planos</a></li>
-                            <li><a class="dropdown-item" href="../usuario/conta.html">Conta</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <a href="../index.html" class="mx-auto">
-                    <img src="../imagens/logo_sem_fundo.png" alt="Clique aqui para ir à página inicial" class="logo-nav">
+        <nav class="navbar navbar-expand-lg sticky-top">
+            <div class="container">
+                <a href="../index.html" class="navbar-brand">
+                    <img src="C:\Users\Hewlett Packard\Downloads\logofogo.jpg.jpeg" alt="Logo Inside Muay Thai" height="50">
                 </a>
-                <a href="../cadastro/formulario.html" class="cadastro">Cadastre-se</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav align-items-center gap-3">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Início</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../academia/sobre.html">Inside</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="biografia.html">Professor</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../planos/mensalidade.html">Planos</a></li>
+                        <li class="nav-item"><a class="btn-main" href="../cadastro/formulario.html">Cadastre-se</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
 
-    <main class="container biografia-container">
-        <article class="biografia-card" aria-labelledby="titulo-biografia">
-            <header class="biografia-info">
-                <figure class="biografia-img">
-                    <img src="../imagens/professor-_ringue.jpeg" alt="Professor Fernando de Gois, conhecido como Pirata">
-                </figure>
-
-                <div class="biografia-apresentacao">
-                    <h1 id="titulo-biografia">Professor Fernando de Gois da Luz (Pirata)</h1>
-                    <p>
-                        Fernando de Gois da Luz, conhecido como "Pirata", nasceu em 3 de abril de 1983, em Santo
-                        André, São Paulo, e construiu uma trajetória de mais de duas décadas nas artes marciais.
-                        Com o passar dos anos, tornou-se uma referência no Muay Thai na região de Campinas,
-                        especialmente em Valinhos. Hoje, atua como Mestre de Muay Thai e lidera a Inside Muay Thai
-                        Valinhos, conduzindo um projeto de centro de treinamento voltado à transformação pessoal
-                        por meio do esporte.
+    <main class="container py-5">
+        <section class="row align-items-center mb-5 g-5">
+            <div class="col-lg-5">
+                <div class="position-relative">
+                    <img src="../imagens/professor-_ringue.jpeg" alt="Mestre Fernando Pirata" class="img-fluid rounded shadow-lg border border-gold">
+                    <div class="position-absolute bottom-0 start-0 bg-danger text-white px-4 py-2 fw-bold">
+                        MESTRE PRETA
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <span class="text-danger fw-bold">TRAJETÓRIA E HONRA</span>
+                <h1 class="display-4 mb-3">Fernando de Gois <br><span class="text-white">"Pirata"</span></h1>
+                <div class="custom-card">
+                    <p class="lead">
+                        Fernando de Gois da Luz, conhecido como "Pirata", construiu uma trajetória de mais de duas décadas nas artes marciais. Tornou-se uma referência no Muay Thai na região de Campinas e Valinhos, liderando a transformação pessoal através do esporte.
                     </p>
                 </div>
-            </header>
+            </div>
+        </section>
 
-            <section class="biografia-info" aria-labelledby="inicio-trajetoria">
-                <h2 id="inicio-trajetoria">Início da trajetória</h2>
-                <p>
-                    Fernando iniciou sua trajetória nas artes marciais em 1999, em São Bernardo do Campo (SBC),
-                    treinando Muay Thai com o mestre Beloquá, no ABC paulista. Foi nesse período que construiu a
-                    base técnica, o condicionamento físico e a disciplina que marcariam toda a sua carreira.
-                </p>
-                <p>
-                    Em 2002, mudou-se para Valinhos e, no mesmo ano, passou a integrar a equipe Muay Thai
-                    Nikolai, onde deu continuidade à sua formação e passou a competir em uma das estruturas mais
-                    tradicionais da modalidade.
-                </p>
-                <p>
-                    Ao longo dos anos 2000, fez parte de uma geração que ajudou a consolidar o Muay Thai na
-                    região de Campinas e no Brasil, em um momento em que a modalidade ainda avançava em
-                    organização, eventos e federações.
-                </p>
-            </section>
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="custom-card h-100">
+                    <h2 class="h4 text-gold mb-3">Início da Trajetória</h2>
+                    <p class="text-gray">
+                        Iniciou em 1999 em São Bernardo do Campo com o mestre Beloquá. Em 2002, mudou-se para Valinhos integrando a tradicional equipe Muay Thai Nikolai, ajudando a consolidar a modalidade no Brasil em um momento de expansão das federações.
+                    </p>
+                </div>
+            </div>
 
-            <section class="biografia-info" aria-labelledby="carreira-competitiva">
-                <h2 id="carreira-competitiva">Carreira competitiva</h2>
-                <p>
-                    No cenário profissional, construiu um cartel de 17 combates, com 13 vitórias, 4 derrotas e
-                    6 triunfos por nocaute, além de inúmeras lutas no circuito amador. Entre meados dos anos
-                    2000 e 2012, viveu uma fase intensa, marcada por camps, viagens, cortes de peso e
-                    participações em diferentes eventos, consolidando um estilo agressivo, técnico e voltado à
-                    superação.
-                </p>
-                <p>
-                    Também realizou temporadas anuais de treinamento na Brazilian Top Team (BTT), uma das
-                    academias de artes marciais mais respeitadas do país. Essas experiências ampliaram seu nível
-                    técnico e fortaleceram sua visão de alto rendimento, levando ao seu Muay Thai a mentalidade
-                    de preparação e profissionalismo característica das grandes equipes.
-                </p>
-                <p>
-                    Em 2008, ano em que recebeu a graduação preta no Muay Thai, Fernando viveu momentos
-                    marcantes ao lado de grandes nomes das lutas. Essas vivências reforçaram sua compreensão do
-                    alto rendimento e ajudaram a consolidar sua identidade como atleta e professor.
-                </p>
-            </section>
+            <div class="col-md-6">
+                <div class="custom-card h-100 border-danger">
+                    <h2 class="h4 text-danger mb-3">Carreira Competitiva</h2>
+                    <p class="text-gray">
+                        Cartel profissional de <strong>17 combates</strong>: 13 vitórias (6 nocautes). Realizou camps na Brazilian Top Team (BTT) e conquistou a graduação preta em 2008, lutando ao lado de grandes nomes do cenário nacional.
+                    </p>
+                </div>
+            </div>
 
-            <section class="biografia-info" aria-labelledby="evolucao-profissional">
-                <h2 id="evolucao-profissional">Evolução profissional</h2>
-                <p>
-                    Ao longo da década de 2010, Fernando passou por estruturas como o Corinthians MMA Anderson
-                    Silva, onde manteve sua base no Muay Thai ao mesmo tempo em que vivenciou treinos e lutas
-                    sob regras de kickboxing, ampliando seu repertório de striking.
-                </p>
-                <p>
-                    Esse período também incluiu a atuação com o Mestre Maestro e a inserção em ambientes de alto
-                    nível, conectados a importantes nomes do MMA nacional.
-                </p>
-                <p>
-                    Depois desse ciclo, aproximou-se ainda mais da região de Campinas, integrando equipes como a
-                    Retz. Esse processo reforçou sua maturidade como professor e treinador, ao mesmo tempo em que
-                    reduzia gradualmente o foco exclusivo no ringue para investir cada vez mais na formação de
-                    alunos e atletas.
-                </p>
-            </section>
+            <div class="col-md-6">
+                <div class="custom-card h-100">
+                    <h2 class="h4 text-gold mb-3">Evolução Profissional</h2>
+                    <p class="text-gray">
+                        Passou pelo Corinthians MMA Anderson Silva e treinou sob regras de kickboxing. Integrou equipes como a Retz, amadurecendo sua visão como treinador de alto rendimento antes de focar integralmente na formação de novos atletas.
+                    </p>
+                </div>
+            </div>
 
-            <section class="biografia-info" aria-labelledby="atuacao-valinhos">
-                <h2 id="atuacao-valinhos">Atuação em Valinhos</h2>
-                <p>
-                    Em Valinhos, Fernando desenvolveu a marca "Pirata Muay Thai" e consolidou sua imagem como
-                    professor em academias da cidade, como a Lift Academia, oferecendo turmas para diferentes
-                    públicos e contribuindo para a popularização do Muay Thai no município.
-                </p>
-                <p>
-                    Com o tempo, passou a reforçar cada vez mais a ideia de que o Muay Thai não é apenas luta,
-                    mas também transformação, disciplina, senso de família e resgate da autoestima.
-                </p>
-                <p>
-                    Essa visão se consolidou nos últimos anos com a Inside Muay Thai Valinhos, projeto em que
-                    atua como Mestre de Muay Thai e líder do centro de treinamento, conduzindo um espaço
-                    estruturado para o desenvolvimento de alunos em todos os níveis, de iniciantes a competidores.
-                </p>
-                <p>
-                    A Inside se apresenta como um ambiente que valoriza acolhimento, metodologia, segurança e
-                    excelência técnica, com treinos em circuito, trabalho em aparadores, aulas coletivas e
-                    personalizadas, sempre com foco na evolução contínua e na mentalidade de guerreiro dentro e
-                    fora do tatame.
-                </p>
-            </section>
+            <div class="col-md-6">
+                <div class="custom-card h-100">
+                    <h2 class="h4 text-gold mb-3">Atuação em Valinhos</h2>
+                    <p class="text-gray">
+                        Líder da Inside Muay Thai Valinhos, Fernando promove o Muay Thai como ferramenta de transformação e autoestima. O centro de treinamento foca em excelência técnica e segurança para todos os níveis, do iniciante ao competidor.
+                    </p>
+                </div>
+            </div>
+        </div>
 
-            <footer class="biografia-info">
-                <h2 class="visually-hidden">Legado</h2>
-                <p>
-                    Hoje, com mais de 25 anos de história nas artes marciais, Fernando "Pirata" de Gois da Luz é
-                    reconhecido como mestre, treinador e mentor, reunindo a experiência de atleta profissional,
-                    a vivência em grandes equipes e a condução de projetos na Inside Muay Thai Valinhos.
+        <section class="mt-5 text-center py-5 bg-darker rounded shadow">
+            <div class="container px-lg-5">
+                <h2 class="h3 text-danger mb-4">O Legado</h2>
+                <p class="lead text-gray">
+                    Com mais de 25 anos de história, Fernando "Pirata" segue impactando famílias em Valinhos, usando o tatame como caminho para a disciplina, saúde mental e construção de novos horizontes.
                 </p>
-                <p>
-                    Seu trabalho em Valinhos e em toda a região de Campinas segue impactando alunos, atletas e
-                    famílias, usando o Muay Thai como caminho para disciplina, saúde mental, transformação
-                    pessoal e construção de novos horizontes dentro e fora do tatame.
-                </p>
-            </footer>
-        </article>
+            </div>
+        </section>
     </main>
 
-    <footer class="text-center py-3">
-        <p>© 2026 Inside Muay Thai Valinhos. Todos os direitos reservados.</p>
+    <footer class="text-center py-4">
+        <p class="small text-secondary">© 2026 Inside Muay Thai Valinhos. Disciplina e Honra.</p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
