@@ -1,158 +1,116 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous">
-  <link rel="stylesheet" href="../estilo/geral.css">
-  <title>Cadastro</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro | Inside Muay Thai</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../estilo/style.css">
 </head>
 <body>
-  <header>
-    <nav class="navbar navbar-expand bg-dark navbar-dark">
-      <div class="container-fluid">
-        <ul class="nav">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Menu</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="../index.html">Início</a></li>
-              <li><a class="dropdown-item" href="../academia/sobre.html">Inside</a></li>
-              <li><a class="dropdown-item" href="../professor/biografia.html">Professor</a></li>
-              <li><a class="dropdown-item" href="../planos/mensalidade.html">Planos</a></li>
-              <li><a class="dropdown-item" href="../usuario/conta.html">Conta</a></li>
-            </ul>
-          </li>
-        </ul>
-        <a href="../index.html" class="mx-auto">
-          <img src="../imagens/logo_sem_fundo.png" alt="Logo" class="logo-nav">
-        </a>
-        <a href="../cadastro/formulario.html" class="cadastro">Cadastre-se</a>
-      </div>
-    </nav>
-  </header>
+    <header>
+        <nav class="navbar navbar-expand-lg sticky-top">
+            <div class="container">
+                <a href="../index.html" class="navbar-brand">
+                    <img src="C:\Users\Hewlett Packard\Downloads\logofogo.jpg.jpeg" alt="Logo" height="50">
+                </a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-  <main class="container py-4">
-    <form id="cadastroForm">
-      <!-- Campos já existentes -->
-      <div class="mb-3">
-        <label for="nome" class="form-label">Nome completo</label>
-        <input type="text" class="form-control" id="nome" required>
-      </div>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav align-items-center gap-3">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Início</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../academia/sobre.html">Inside</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../professor/biografia.html">Professor</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../planos/mensalidade.html">Planos</a></li>
+                        <li class="nav-item"><a class="btn-main" href="formulario.html">Cadastre-se</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-      <div class="mb-3">
-        <label for="nascimento" class="form-label">Data de Nascimento</label>
-        <input type="date" class="form-control" id="nascimento" required>
-      </div>
+    <main class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="custom-card shadow-lg">
+                    <h2 class="text-center mb-4">Junte-se à <span class="text-danger">Elite</span></h2>
+                    
+                    <form id="cadastroForm">
+                        <div class="mb-3">
+                            <label for="nome" class="form-label text-gray">Nome completo</label>
+                            <input type="text" class="form-control custom-input" id="nome" placeholder="Digite seu nome completo" required>
+                        </div>
 
-      <div class="mb-3">
-        <label for="telefone" class="form-label">Telefone / Celular</label>
-        <input type="tel" class="form-control" id="telefone" required>
-      </div>
+                        <div class="mb-3">
+                            <label for="nascimento" class="form-label text-gray">Data de Nascimento</label>
+                            <input type="date" class="form-control custom-input" id="nascimento" required>
+                        </div>
 
-      <div class="mb-3">
-        <label for="email" class="form-label">Seu E-mail</label>
-        <input type="email" class="form-control" id="email" required>
-      </div>
+                        <div class="mb-3">
+                            <label for="telefone" class="form-label text-gray">Telefone / Celular</label>
+                            <input type="tel" class="form-control custom-input" id="telefone" placeholder="(00) 00000-0000" required>
+                        </div>
 
-      <div class="mb-3">
-        <label for="nivel" class="form-label">Nível de Experiência</label>
-        <select class="form-select" id="nivel" required>
-          <option selected disabled>Selecione seu nível</option>
-          <option value="iniciante">Iniciante</option>
-          <option value="intermediario">Intermediário</option>
-          <option value="avancado">Avançado</option>
-        </select>
-      </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label text-gray">Seu E-mail</label>
+                            <input type="email" class="form-control custom-input" id="email" placeholder="email@exemplo.com" required>
+                        </div>
 
-      <!-- Campo Experimental -->
-      <div class="mb-3">
-        <label class="form-label" for="experimentalsim">Experimental</label><br>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="experimental" id="experimentalsim" value="option1" required>
-          <label class="form-check-label" for="experimentalsim">Sim</label>
+                        <div class="mb-3">
+                            <label for="nivel" class="form-label text-gray">Nível de Experiência</label>
+                            <select class="form-select custom-input" id="nivel" required>
+                                <option selected disabled value="">Selecione seu nível</option>
+                                <option value="iniciante">Iniciante</option>
+                                <option value="intermediario">Intermediário</option>
+                                <option value="avancado">Avançado</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="lesao" class="form-label text-gray">Possui alguma lesão ou condição médica?</label>
+                            <textarea class="form-control custom-input" id="lesao" rows="2" placeholder="Descreva aqui ou digite 'Nenhuma'"></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="senha" class="form-label text-gray">Senha</label>
+                            <input type="password" class="form-control custom-input" id="senha" required>
+                        </div>
+
+                        <button type="submit" class="btn-main w-100 mt-3">Confirmar Cadastro</button>
+                    </form>
+                </div>
+            </div>
         </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="experimental" id="experimentalnao" value="option2">
-          <label class="form-check-label" for="experimentalnao">Não</label>
+    </main>
+
+    <footer class="text-center">
+        <div class="container">
+            <p class="small">© 2026 Inside Muay Thai Valinhos. Todos os direitos reservados.</p>
         </div>
-      </div>
+    </footer>
 
-      <!-- Campo Dias disponíveis -->
-      <fieldset class="mb-3">
-        <legend class="form-label">Dias disponíveis para treino:</legend>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="checkbox" name="dias" id="seg" value="Segunda">
-          <label class="form-check-label" for="seg">Seg</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="checkbox" name="dias" id="ter" value="Terça">
-          <label class="form-check-label" for="ter">Ter</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="checkbox" name="dias" id="qua" value="Quarta">
-          <label class="form-check-label" for="qua">Qua</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="checkbox" name="dias" id="qui" value="Quinta">
-          <label class="form-check-label" for="qui">Qui</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="checkbox" name="dias" id="sex" value="Sexta">
-          <label class="form-check-label" for="sex">Sex</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="checkbox" name="dias" id="todos" value="Todos">
-          <label class="form-check-label" for="todos">Todos</label>
-        </div>
-      </fieldset>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById("cadastroForm").addEventListener("submit", function(event) {
+            event.preventDefault();
 
-      <div class="mb-3">
-        <label for="lesao" class="form-label">Possui alguma lesão ou condição médica?</label>
-        <textarea class="form-control" id="lesao" rows="2"></textarea>
-      </div>
+            const dados = {
+                nome: document.getElementById("nome").value,
+                nascimento: document.getElementById("nascimento").value,
+                telefone: document.getElementById("telefone").value,
+                email: document.getElementById("email").value,
+                nivel: document.getElementById("nivel").value,
+                lesao: document.getElementById("lesao").value,
+                senha: document.getElementById("senha").value
+            };
 
-      <div class="mb-3">
-        <label for="senha" class="form-label">Senha</label>
-        <input type="password" class="form-control" id="senha" required>
-      </div>
-
-      <button type="submit" class="btn btn-primary w-100">Confirmar cadastro</button>
-    </form>
-  </main>
-
-  <footer class="text-center py-3">
-    <p>© 2023 Nome da Instituição. Todos os direitos reservados.</p>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-  <script>
-  document.getElementById("cadastroForm").addEventListener("submit", function(event) {
-    event.preventDefault();
-
-    const diasSelecionados = Array.from(document.querySelectorAll('input[name="dias"]:checked'))
-                                  .map(el => el.value);
-
-    const dados = {
-      nome: document.getElementById("nome").value,
-      nascimento: document.getElementById("nascimento").value,
-      telefone: document.getElementById("telefone").value,
-      email: document.getElementById("email").value,
-      nivel: document.getElementById("nivel").value,
-      lesao: document.getElementById("lesao").value,
-      senha: document.getElementById("senha").value,
-      experimental: document.querySelector('input[name="experimental"]:checked').value,
-      dias: diasSelecionados
-    };
-
-    localStorage.setItem("dadosCadastro", JSON.stringify(dados));
-    alert("Cadastro realizado com sucesso!");
-    window.location.href = "../usuario/conta.html";
-  });
-  </script>
+            localStorage.setItem("dadosCadastro", JSON.stringify(dados));
+            window.location.href = "../usuario/conta.html";
+        });
+    </script>
 </body>
 </html>
