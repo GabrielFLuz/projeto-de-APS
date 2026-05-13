@@ -1,136 +1,169 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous">
-  <link rel="stylesheet" href="../estilo/geral.css">
-  <title>Conta</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Conta | Inside Muay Thai</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../estilo/style.css">
+    <style>
+        /* Ajustes específicos para a área logada */
+        .user-data-item {
+            border-bottom: 1px solid #222;
+            padding: 10px 0;
+        }
+        .user-data-item strong {
+            color: var(--gold);
+            display: inline-block;
+            width: 120px;
+        }
+        .btn-edit {
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            background: transparent;
+            transition: 0.3s;
+        }
+        .btn-edit:hover {
+            background: var(--gold);
+            color: black;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <nav class="navbar navbar-expand bg-dark navbar-dark">
-      <div class="container-fluid">
-        <ul class="nav">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Menu</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="../index.html">Início</a></li>
-              <li><a class="dropdown-item" href="../academia/sobre.html">Inside</a></li>
-              <li><a class="dropdown-item" href="../professor/biografia.html">Professor</a></li>
-              <li><a class="dropdown-item" href="../planos/mensalidade.html">Planos</a></li>
-            </ul>
-          </li>
-        </ul>
-        <a href="../index.html" class="mx-auto">
-          <img src="C:\Users\Hewlett Packard\Downloads\logofogo.jpg.jpeg" alt="Logo" class="logo-nav">
-        </a>
-        <a href="../cadastro/formulario.html" class="cadastro">Cadastre-se</a>
-      </div>
-    </nav>
-  </header>
+    <header>
+        <nav class="navbar navbar-expand-lg sticky-top">
+            <div class="container">
+                <a href="../index.html" class="navbar-brand">
+                    <img src="../imagens/logofogo.jpeg" alt="Logo" height="50">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav align-items-center gap-3">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Início</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../academia/sobre.html">Inside</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../professor/biografia.html">Professor</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../planos/mensalidade.html">Planos</a></li>
+                        <li class="nav-item"><a class="btn-main" href="../cadastro/formulario.html">Sair</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-  <main class="container py-4">
-    <h2>Minha Conta</h2>
-    <div id="dadosConta" class="mt-3"></div>
-    <button id="editarBtn" class="btn btn-warning mt-3">Editar dados</button>
+    <main class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="custom-card shadow-lg">
+                    <h2 class="mb-4 text-gold">Minha <span class="text-white">Conta</span></h2>
+                    
+                    <div id="dadosConta" class="mb-4">
+                        </div>
 
-    <!-- Formulário de edição oculto -->
-    <form id="editarForm" class="mt-3" style="display:none;">
-      <div class="mb-2">
-        <label for="editNome" class="form-label">Nome</label>
-        <input type="text" class="form-control" id="editNome">
-      </div>
-      <div class="mb-2">
-        <label for="editNascimento" class="form-label">Nascimento</label>
-        <input type="date" class="form-control" id="editNascimento">
-      </div>
-      <div class="mb-2">
-        <label for="editTelefone" class="form-label">Telefone</label>
-        <input type="tel" class="form-control" id="editTelefone">
-      </div>
-      <div class="mb-2">
-        <label for="editEmail" class="form-label">Email</label>
-        <input type="email" class="form-control" id="editEmail">
-      </div>
-      <div class="mb-2">
-        <label for="editNivel" class="form-label">Nível</label>
-        <select class="form-select" id="editNivel">
-          <option value="iniciante">Iniciante</option>
-          <option value="intermediario">Intermediário</option>
-          <option value="avancado">Avançado</option>
-        </select>
-      </div>
-      <div class="mb-2">
-        <label for="editLesao" class="form-label">Lesão</label>
-        <textarea class="form-control" id="editLesao" rows="2"></textarea>
-      </div>
-      <button type="submit" class="btn btn-success w-100">Salvar alterações</button>
-    </form>
-  </main>
+                    <button id="editarBtn" class="btn btn-edit w-100 mb-3">Editar Perfil</button>
 
-  <footer class="text-center py-3">
-    <p>© 2023 Nome da Instituição. Todos os direitos reservados.</p>
-  </footer>
+                    <form id="editarForm" style="display:none;" class="mt-4 border-top border-secondary pt-4">
+                        <h3 class="h5 text-danger mb-3">Atualizar Informações</h3>
+                        
+                        <div class="mb-3">
+                            <label class="form-label text-gray small">Nome</label>
+                            <input type="text" class="form-control custom-input" id="editNome" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label text-gray small">Data de Nascimento</label>
+                            <input type="date" class="form-control custom-input" id="editNascimento" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label text-gray small">Telefone</label>
+                            <input type="tel" class="form-control custom-input" id="editTelefone" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label text-gray small">E-mail</label>
+                            <input type="email" class="form-control custom-input" id="editEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label text-gray small">Nível</label>
+                            <select class="form-select custom-input" id="editNivel">
+                                <option value="iniciante">Iniciante</option>
+                                <option value="intermediario">Intermediário</option>
+                                <option value="avancado">Avançado</option>
+                            </select>
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label text-gray small">Lesão/Condição</label>
+                            <textarea class="form-control custom-input" id="editLesao" rows="2"></textarea>
+                        </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const dados = JSON.parse(localStorage.getItem("dadosCadastro"));
-      const div = document.getElementById("dadosConta");
-      const editarBtn = document.getElementById("editarBtn");
-      const editarForm = document.getElementById("editarForm");
+                        <div class="d-flex gap-2">
+                            <button type="submit" class="btn-main w-100">Salvar</button>
+                            <button type="button" class="btn btn-outline-secondary w-100" onclick="location.reload()">Cancelar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
 
-      function mostrarDados() {
-        if (dados) {
-          div.innerHTML = `
-            <p><strong>Nome:</strong> ${dados.nome}</p>
-            <p><strong>Nascimento:</strong> ${dados.nascimento}</p>
-            <p><strong>Telefone:</strong> ${dados.telefone}</p>
-            <p><strong>Email:</strong> ${dados.email}</p>
-            <p><strong>Nível:</strong> ${dados.nivel}</p>
-            <p><strong>Lesão:</strong> ${dados.lesao}</p>
-          `;
-        } else {
-          div.innerHTML = "<p>Nenhum cadastro encontrado.</p>";
-          editarBtn.style.display = "none";
-        }
-      }
+    <footer class="text-center py-4 mt-5 border-top border-secondary">
+        <p class="small text-secondary">© 2026 Inside Muay Thai Valinhos. Disciplina e Honra.</p>
+    </footer>
 
-      mostrarDados();
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const dados = JSON.parse(localStorage.getItem("dadosCadastro"));
+            const div = document.getElementById("dadosConta");
+            const editarBtn = document.getElementById("editarBtn");
+            const editarForm = document.getElementById("editarForm");
 
-      // Mostrar formulário de edição com dados preenchidos
-      editarBtn.addEventListener("click", function() {
-        editarForm.style.display = "block";
-        document.getElementById("editNome").value = dados.nome;
-        document.getElementById("editNascimento").value = dados.nascimento;
-        document.getElementById("editTelefone").value = dados.telefone;
-        document.getElementById("editEmail").value = dados.email;
-        document.getElementById("editNivel").value = dados.nivel;
-        document.getElementById("editLesao").value = dados.lesao;
-      });
+            function mostrarDados() {
+                if (dados) {
+                    div.innerHTML = `
+                        <div class="user-data-item"><strong>Nome:</strong> ${dados.nome}</div>
+                        <div class="user-data-item"><strong>Nascimento:</strong> ${dados.nascimento}</div>
+                        <div class="user-data-item"><strong>Telefone:</strong> ${dados.telefone}</div>
+                        <div class="user-data-item"><strong>Email:</strong> ${dados.email}</div>
+                        <div class="user-data-item"><strong>Nível:</strong> ${dados.nivel}</div>
+                        <div class="user-data-item"><strong>Lesão:</strong> ${dados.lesao || 'Nenhuma'}</div>
+                    `;
+                } else {
+                    div.innerHTML = "<div class='alert alert-dark text-gray'>Nenhum cadastro encontrado.</div>";
+                    editarBtn.style.display = "none";
+                }
+            }
 
-      // Salvar alterações
-      editarForm.addEventListener("submit", function(event) {
-        event.preventDefault();
-        const novosDados = {
-          nome: document.getElementById("editNome").value,
-          nascimento: document.getElementById("editNascimento").value,
-          telefone: document.getElementById("editTelefone").value,
-          email: document.getElementById("editEmail").value,
-          nivel: document.getElementById("editNivel").value,
-          lesao: document.getElementById("editLesao").value
-        };
-        localStorage.setItem("dadosCadastro", JSON.stringify(novosDados));
-        alert("Dados atualizados com sucesso!");
-        location.reload(); // recarrega a página para mostrar os novos dados
-      });
-    });
-  </script>
+            mostrarDados();
+
+            editarBtn.addEventListener("click", function() {
+                editarForm.style.display = "block";
+                editarBtn.style.display = "none";
+                document.getElementById("editNome").value = dados.nome;
+                document.getElementById("editNascimento").value = dados.nascimento;
+                document.getElementById("editTelefone").value = dados.telefone;
+                document.getElementById("editEmail").value = dados.email;
+                document.getElementById("editNivel").value = dados.nivel;
+                document.getElementById("editLesao").value = dados.lesao;
+            });
+
+            editarForm.addEventListener("submit", function(event) {
+                event.preventDefault();
+                const novosDados = {
+                    nome: document.getElementById("editNome").value,
+                    nascimento: document.getElementById("editNascimento").value,
+                    telefone: document.getElementById("editTelefone").value,
+                    email: document.getElementById("editEmail").value,
+                    nivel: document.getElementById("editNivel").value,
+                    lesao: document.getElementById("editLesao").value
+                };
+                localStorage.setItem("dadosCadastro", JSON.stringify(novosDados));
+                alert("Dados atualizados com sucesso!");
+                location.reload();
+            });
+        });
+    </script>
 </body>
 </html>
