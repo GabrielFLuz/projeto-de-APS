@@ -8,7 +8,7 @@ body {
     min-height: 100vh;
 }
 
-
+/* Esconde elementos visualmente, mas mantém acessíveis para leitores de tela */
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -28,24 +28,24 @@ body {
 
 /*  CARD DA BIOGRAFIA  */
 .biografia-card {
-    background: #202020;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: #202020; /* Cor de fundo do card */
+    border: 1px solid rgba(255, 255, 255, 0.08); /* Borda sutil para destacar o card */
     border-radius: 18px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12); /* Sombra para dar profundidade */
     max-width: 1100px;
     margin: 0 auto;
     padding: 32px;
 }
 
-.biografia-card > .biografia-info {
-    border-top: 1px solid rgba(0, 0, 0, 0.08);
-    padding-top: 28px;
+.biografia-card > .biografia-info {/* Header e Footer do card */
+    border-top: 1px solid rgba(0, 0, 0, 0.08);/* Borda sutil para separar o conteúdo do card */
+    padding-top: 28px;     /* Espaçamento entre o conteúdo do card e a borda superior */
     margin-top: 28px;
 }
 
-.biografia-card > header.biografia-info {
-    display: grid;
-    grid-template-columns: 1fr;
+.biografia-card > header.biografia-info {/* Header do card */
+    display: grid;         /* Organiza o conteúdo em uma grade para melhor layout */
+    grid-template-columns: 1fr;   /*para deixar em colunas únicas e adaptáveis*/
     justify-items: center;
     gap: 24px;
     border-top: 0;
@@ -54,7 +54,7 @@ body {
     margin-bottom: 12px;
 }
 
-.biografia-apresentacao {
+.biografia-apresentacao {/* Seção de apresentação do professor, contendo a imagem e as informações principais */
     display: grid;
     gap: 12px;
     max-width: 760px;
@@ -66,7 +66,7 @@ body {
     max-width: 360px;
 }
 
-.biografia-img img {
+.biografia-img img {/* Estilização da imagem do professor a imagem de cima gente*/
     display: block;
     width: 100%;
     border-radius: 16px;
@@ -78,8 +78,8 @@ body {
 /* Textos da Biogr*/
 .biografia-info h1 {
     color: #ffffff;
-    font-size: clamp(1.5rem, 2.6vw, 2.2rem);
-    font-weight: 700;
+    font-size: clamp(1.5rem, 2.6vw, 2.2rem);/* Tamanho do título adaptável para diferentes tamanhos de tela */
+    font-weight: 700;/* Deixa o título mais destacado e legível */
     line-height: 1.1;
     margin: 0;
     text-align: center;
@@ -99,14 +99,14 @@ body {
     font-size: 1.05rem;
     line-height: 1.8;
     margin: 0 0 18px;
-    text-align: justify;
+    text-align: justify;  /* Justifica o texto para uma melhor leitura, especialmente em parágrafos mais longos */
 }
 
-.biografia-info p:last-child {
+.biografia-info p:last-child { /* Remove a margem inferior do último parágrafo para evitar espaçamento extra no final da seção de informações */
     margin-bottom: 0;
 }
 
-.biografia-card > footer.biografia-info {
+.biografia-card > footer.biografia-info { /* Footer do card, onde ficam as informações adicionais no final */
     background: #2e2e2e;
     border-radius: 14px;
     padding: 28px;
@@ -116,43 +116,43 @@ body {
 
 
 /*RESPONSIVO/ Tamanhos*/
-@media (max-width: 768px) {
+@media (max-width: 768px) { /* Para telas menores, como tablets e celulares */
     .biografia-container {
         padding: 32px 16px;
     }
 
-    .biografia-card {
+    .biografia-card { /* Reduz o padding do card para melhor se adequar a telas menores */
         padding: 20px;
     }
 
-    .biografia-card > header.biografia-info {
+    .biografia-card > header.biografia-info { /* Ajusta o layout do header para telas menores, organizando os elementos em uma única coluna e centralizando-os */
         gap: 20px;
     }
 
-    .biografia-img {
+    .biografia-img {   /* Reduz o tamanho da imagem para melhor se adequar a telas menores */
         max-width: 320px;
         margin: 0 auto;
     }
 
-    .biografia-info h1 {
+    .biografia-info h1 { /* Reduz o tamanho do título para melhor se adequar a telas menores, mantendo a legibilidade e o destaque */
         font-size: 1.35rem;
         text-align: center;
     }
 
-    .biografia-info h2 {
+    .biografia-info h2 { /* Reduz o tamanho do subtítulo para melhor se adequar a telas menores, mantendo a hierarquia visual e o destaque */
         font-size: 1.25rem;
     }
 
-    .biografia-info p {
+    .biografia-info p { /* Reduz o tamanho do texto para melhor se adequar a telas menores */
         font-size: 1rem;
         text-align: left;
     }
 
-    .biografia-card > footer.biografia-info {
+    .biografia-card > footer.biografia-info {/* Reduz o padding do footer para melhor se adequar a telas menores */
         padding: 20px;
     }
 
-    .logo-nav {
+    .logo-nav {/* Reduz o tamanho da logo para melhor se adequar a telas menores, mantendo a proporção e a visibilidade */
         max-width: 120px;
     }
 }
