@@ -3,165 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous">
-    <link rel="stylesheet" href="../estilo/geral.css">
+    <title>Planos | Inside Muay Thai</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../estilo/style.css">
     <link rel="stylesheet" href="../estilo/mensalidade.css">
-    <title>Planos</title>
+    <style>
+        /* Ajuste para centralização total da tabela */
+        .secao-tabela {
+            display: flex;
+            justify-content: center; /* Centraliza horizontalmente */
+            align-items: center;     /* Alinhamento vertical (opcional) */
+            width: 100%;
+        }
+
+        .table {
+            max-width: 850px; /* Largura ideal para visualização */
+            width: 100%;
+            margin: 0 auto !important; /* Força o centro */
+            border-collapse: separate;
+            border-spacing: 0;
+        }
+
+        .table th, .table td {
+            text-align: center !important; /* Centraliza o texto das células */
+            vertical-align: middle !important;
+            padding: 1.2rem !important;
+        }
+
+        /* Melhora o destaque do plano anual */
+        .plano-destaque {
+            border: 2px solid var(--gold) !important;
+            background-color: rgba(212, 175, 55, 0.05);
+        }
+    </style>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand bg-dark navbar-dark">
-            <div class="container-fluid">
-                <ul class="nav">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Menu</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="../index.html">Início</a></li>
-                            <li><a class="dropdown-item" href="../academia/sobre.html">Inside</a></li>
-                            <li><a class="dropdown-item" href="../professor/biografia.html">Professor</a></li>                            
-                            <li><a class="dropdown-item" href="../usuario/conta.html">Conta</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <a href="../index.html" class="mx-auto">
-                    <img src="../imagens/logo_sem_fundo.png" alt="Clique aqui para ir à página inicial" class="logo-nav">
+        <nav class="navbar navbar-expand-lg sticky-top">
+            <div class="container">
+                <a href="../index.html" class="navbar-brand">
+                    <img src="C:\Users\Hewlett Packard\Downloads\logofogo.jpg.jpeg"alt="Logo Inside Muay Thai" height="50">
                 </a>
-                <a href="../cadastro/formulario.html" class="cadastro">Cadastre-se</a>
-            </div>            
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav align-items-center gap-3">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Início</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../academia/sobre.html">Inside</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="mensalidade.html">Planos</a></li>
+                        <li class="nav-item"><a class="btn-main" href="../cadastro/formulario.html">Cadastre-se</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
-    <body>
-        <section>
-            <div class="info-div">Os preços são negociáveis <br>
-                <p style="font-size: clamp(5px, 15px, 25px);">Telefone para contato: (19)99546-9107</p>
-            </div>
-            <Table>                
-                <thead>
-                    <tr>
-                        <th>Mensal</th>
-                        <th>Trimestral</th>
-                        <th>Semestral</th>
-                        <th>Anual</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="l1">
-                        <td>Camiseta</td>
-                        <td>Camiseta</td>
-                        <td>Camiseta</td>
-                        <td>Camiseta</td>
-                    </tr>
-                    <tr class="l2">
-                        <td  class="desativado" style="text-decoration: line-through;">Bandagem</td>
-                        <td>Bandagem</td>
-                        <td>Bandagem</td>
-                        <td>Bandagem</td>
-                    </tr>
-                    <tr class="l3">
-                        <td class="desativado" style="text-decoration: line-through;">Luva</td>
-                        <td class="desativado" style="text-decoration: line-through;">Luva</td>
-                        <td>Luva</td>
-                        <td>Luva</td>
-                    </tr>
-                    <tr class="l4">
-                        <td class="desativado" style="text-decoration: line-through;">Aulas Especias</td>
-                        <td class="desativado" style="text-decoration: line-through;">Aulas Especias</td>
-                        <td>Aulas Especias</td>
-                        <td>Aulas Especias</td>                
-                    </tr>
-                    <tr class="l5">
-                        <td class="desativado" style="text-decoration: line-through;">Materiais Especiais</td>
-                        <td class="desativado" style="text-decoration: line-through;">Materiais Especiais</td>
-                        <td class="desativado" style="text-decoration: line-through;">Materiais Especiais</td>
-                        <td>Materiais Especiais</td>
-                    </tr>
-                    <tr class="l6">
-                        <td class="desativado" style="text-decoration: line-through;">Premiações</td>
-                        <td class="desativado" style="text-decoration: line-through;">Premiações</td>
-                        <td class="desativado" style="text-decoration: line-through;">Premiações</td>
-                        <td>Premiações</td>
-                    </tr>
-                </tbody>
-            </Table>
+
+    <main class="container py-5">
+        <section class="text-center mb-5">
+            <h1 class="display-4">Escolha sua <span class="text-danger">Jornada</span></h1>
+            <p class="text-gray">Valores transparentes para sua evolução.</p>
         </section>
-        
-        <!-- Seção de seleção e customização de planos -->
-        <section class="container my-4">
-          <h3>Selecione e personalize seu plano</h3>
-          <form id="planoForm" class="mt-3">
-            <div class="mb-3">
-              <label for="plano" class="form-label">Escolha o plano:</label>
-              <select class="form-select" id="plano" required>
-                <option value="" disabled selected>Selecione...</option>
-                <option value="mensal">Mensal - R$399,00</option>
-                <option value="trimestral">Trimestral - R$837,00</option>
-                <option value="semestral">Semestral - R$1.434,00</option>
-                <option value="anual">Anual - R$2.628,00</option>
-              </select>
+
+        <section class="secao-tabela mb-5">
+            <div class="table-responsive w-100 d-flex justify-content-center">
+                <table class="table text-white border-secondary">
+                    <thead>
+                        <tr class="table-dark">
+                            <th>Plano Mensal</th>
+                            <th>Plano Semestral</th>
+                            <th class="text-danger fw-bold border-gold">Plano Anual</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="precos">
+                            <td class="fs-4">R$ 279 <br><small class="text-secondary fs-6">/mês</small></td>
+                            <td class="fs-4">R$ 239 <br><small class="text-secondary fs-6">/mês</small></td>
+                            <td class="fs-3 text-danger fw-black">R$ 219 <br><small class="text-secondary fs-6">/mês</small></td>
+                        </tr>
+                        <tr>
+                            <td>Camiseta Oficial</td>
+                            <td>Camiseta Oficial</td>
+                            <td>Camiseta Oficial</td>
+                        </tr>
+                        <tr>
+                            <td class="text-muted">---</td>
+                            <td>Bandagem</td>
+                            <td>Bandagem</td>
+                        </tr>
+                        <tr>
+                            <td class="text-muted">---</td>
+                            <td class="text-muted">---</td>
+                            <td>Luva Profissional</td>
+                        </tr>
+                        <tr>
+                            <td class="text-muted">---</td>
+                            <td class="text-muted">---</td>
+                            <td>Aulas Especiais</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-
-            <fieldset class="mb-3">
-                <legend class="form-label">Customizações disponíveis:</legend>
-
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="extraAulas" value="100">
-                    <label class="form-check-label" for="extraAulas">
-                    Adicionar aulas especiais (+ R$100,00)
-                    </label>
-                </div>
-
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="extraMateriais" value="100">
-                    <label class="form-check-label" for="extraMateriais">
-                    Materiais extras (+ R$100,00)
-                    </label>
-                </div>
-            </fieldset>
-
-            <button type="submit" class="btn btn-primary">Calcular valor final</button>
-          </form>
-
-          <div id="resultado" class="alert alert-info mt-3" style="display:none;"></div>
         </section>
-    </body>
-    <footer class="text-center py-3">
-        <p>© 2026 Inside Muay Thai Valinhos. Todos os direitos reservados.</p>
+
+        <section class="row justify-content-center mt-5">
+            <div class="col-lg-8">
+                <div class="custom-card shadow-lg p-4">
+                    <h3 class="text-gold mb-4 text-center">Simulador de Plano</h3>
+                    <form id="planoForm" class="row g-4">
+                        <div class="col-md-6">
+                            <label class="form-label text-gray">Escolha o plano:</label>
+                            <select class="form-select custom-input" id="plano" required>
+                                <option value="mensal">Mensal - R$ 279,00</option>
+                                <option value="semestral">Semestral - R$ 239,00</option>
+                                <option value="anual">Anual - R$ 219,00</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label text-gray">Extras:</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="extraAulas">
+                                <label class="form-check-label text-white">Aulas especiais (+R$100)</label>
+                            </div>
+                        </div>
+                        <div class="col-12 text-center">
+                            <button type="submit" class="btn-main px-5">Calcular</button>
+                        </div>
+                    </form>
+                    <div id="resultado" class="alert alert-dark mt-4 border-gold text-white text-center" style="display:none;"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center py-4">
+        <p class="small text-secondary">© 2026 Inside Muay Thai Valinhos.</p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-        <script>
-  document.getElementById("planoForm").addEventListener("submit", function(event) {
-    event.preventDefault();
-
-    const plano = document.getElementById("plano").value;
-    let valorBase = 0;
-
-    switch(plano) {
-      case "mensal": valorBase = 399; break;
-      case "trimestral": valorBase = 837; break;
-      case "semestral": valorBase = 1434; break;
-      case "anual": valorBase = 2628; break;
-    }
-
-    let extras = 0;
-    if (document.getElementById("extraAulas").checked) extras += 100;
-    if (document.getElementById("extraMateriais").checked) extras += 100;
-
-    const valorFinal = valorBase + extras;
-
-    const resultadoDiv = document.getElementById("resultado");
-    resultadoDiv.style.display = "block";
-    resultadoDiv.innerHTML = `<strong>Plano selecionado:</strong> ${plano.toUpperCase()}<br>
-                              <strong>Valor base:</strong> R$${valorBase.toFixed(2)}<br>
-                              <strong>Extras:</strong> R$${extras.toFixed(2)}<br>
-                              <strong>Valor final:</strong> R$${valorFinal.toFixed(2)}`;
-        });
-    </script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
