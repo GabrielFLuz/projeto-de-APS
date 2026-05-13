@@ -1,62 +1,45 @@
-/* Container geral */
-.table-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;           /* permite quebra em telas menores */
-    gap: 20px;                 /* espaço entre colunas */
-    margin: 20px auto;
-    max-width: 1200px;
+/* Info Div de Contato */
+.info-div {
+    background-color: var(--bg-dark-gray);
+    border-left: 5px solid var(--primary-red);
+    padding: 20px;
+    border-radius: 4px;
 }
 
-/* Cada plano vira um card */
+.info-div span {
+    color: var(--gold);
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+/* Tabela de Planos */
 table {
-    display: flex;
-    flex-direction: column;
-    flex: 1 1 250px;           /* largura mínima 250px, cresce conforme espaço */
-    background-color: rgb(63, 58, 58);
-    color: white;
-    border: solid 1px #444;
-    border-radius: 8px;
-    padding: 15px;
-    min-width: 250px;
+    background-color: var(--bg-dark-gray);
+    border: 1px solid #333;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
-/* Cabeçalho do plano */
-th {
-    font-size: 1.3rem;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 10px;
+thead th {
+    background-color: #111;
+    color: var(--gold);
+    padding: 20px !important;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--gold) !important;
 }
 
-/* Itens */
-td {
-    text-align: center;
-    padding: 12px;
-    border-top: 1px solid #555;
-    font-size: 1rem;
+.plano-destaque {
+    color: var(--primary-red) !important;
+    font-weight: 900;
 }
 
-/* Responsividade */
-@media (max-width: 992px) {
-    .table-container {
-        gap: 15px;
-    }
-    table {
-        flex: 1 1 45%;          /* duas colunas lado a lado em tablets */
-    }
+.desativado {
+    text-decoration: line-through;
+    color: #444;
 }
 
-@media (max-width: 576px) {
-    .table-container {
-        flex-direction: column; /* empilha os planos no celular */
-        align-items: center;
-    }
-    table {
-        width: 90%;             /* ocupa quase toda a largura da tela */
-    }
-    td {
-        font-size: 0.9rem;      /* texto menor para caber bem */
-    }
+/* Alerta de Resultado do Calculador */
+#resultado {
+    border-left: 5px solid var(--gold);
+    font-size: 1.1rem;
 }
